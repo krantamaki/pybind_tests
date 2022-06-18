@@ -1,0 +1,38 @@
+Instructions
+
+1. Write the wanted c++ code and add to the file pybind11 boilerplate
+
+	#include <pybind11/pybind11.h>
+	namespace py = pybind11;
+	
+	code
+
+	PYBIND11_MODULE(module_name, handle) {
+		handle.doc() = "Module description";
+		handle.def("py_func_name", &c++_func_name, "Function description");
+	}
+	
+2. Create cmake file called CMakeLits.txt in the same folder as c++ code file
+3. Add following to the cmake file
+
+	cmake_minimum_required(VERSION 3.4)
+	project(project_name)
+	add_subdirectory(pybind11)
+	pybind11_add_module(module_name c++_src.cpp)
+
+4. Copy pybind11 to the same directory (Not the optimal solution)
+	
+	git clone https://github.com/pybind/pybind11.git
+	
+5. Create a build directory and navigate to it
+
+	mkdir build && cd build
+	
+6. Call cmake to create an executable
+
+	cmake ..
+	make
+	
+7. Now if .py file is created in the build directory c++ code can be 
+imported as a module with name module_name and function called with name
+py_func_name

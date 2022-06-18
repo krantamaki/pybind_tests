@@ -1,0 +1,5 @@
+/home/pi/Documents/c_c++_files/pybind_power/build/CMakeFiles/rebuild_cache.dir
+/home/pi/Documents/c_c++_files/pybind_power/build/CMakeFiles/edit_cache.dir
+/home/pi/Documents/c_c++_files/pybind_power/build/CMakeFiles/tests.dir
+/home/pi/Documents/c_c++_files/pybind_power/build/pybind11/CMakeFiles/rebuild_cache.dir
+/home/pi/Documents/c_c++_files/pybind_power/build/pybind11/CMakeFiles/edit_cache.dir
